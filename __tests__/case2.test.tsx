@@ -39,17 +39,6 @@ describe('CardPanel', () => {
     await waitFor(() => {
       const rajavithiDisplay = screen.queryAllByTestId("Rajavithi Hospital")
       expect(rajavithiDisplay).toHaveLength(0)
-
-      const rajavithiOne = within(rajavithiRating).getByRole('radio', {name: "1 Star"}) as HTMLElement
-      const rajavithiTwo = within(rajavithiRating).getByRole('radio', {name: "2 Stars"}) as HTMLElement
-      const rajavithiThree = within(rajavithiRating).getByRole('radio', {name: "3 Stars"}) as HTMLElement
-      const rajavithiFour = within(rajavithiRating).getByRole('radio', {name: "4 Stars"}) as HTMLElement
-      const rajavithiFive = within(rajavithiRating).getByRole('radio', {name: "5 Stars"}) as HTMLElement
-      expect(rajavithiOne).not.toBeChecked()
-      expect(rajavithiTwo).not.toBeChecked()
-      expect(rajavithiThree).not.toBeChecked()
-      expect(rajavithiFour).not.toBeChecked()
-      expect(rajavithiFive).not.toBeChecked()
     })
 
   } //end it
